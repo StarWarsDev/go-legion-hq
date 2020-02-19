@@ -8,6 +8,31 @@ type Data struct {
 	AllCards           map[string]Card   `json:"allCards"`
 }
 
+func (data *Data) cardsOfType(cardType string) []Card {
+	var cards []Card
+	for _, card := range data.AllCards {
+		if card.CardType == cardType {
+			cards = append(cards, card)
+		}
+	}
+	return cards
+}
+
+// UpgradeCards returns a filtered set of cards with CardType == "upgrade"
+func (data *Data) UpgradeCards() []Card {
+	return data.cardsOfType("upgrade")
+}
+
+// CommandCards returns a filtered set of cards with CardType == "command"
+func (data *Data) CommandCards() []Card {
+	return data.cardsOfType("command")
+}
+
+// UnitCards returns a filtered set of cards with CardType == "upgrade"
+func (data *Data) UnitCards() []Card {
+	return data.cardsOfType("unit")
+}
+
 // Link refers to a URL and contains a label
 type Link struct {
 	Name string `json:"name"`
