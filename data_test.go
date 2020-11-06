@@ -110,8 +110,9 @@ func Test_jsonToCard(t *testing.T) {
 					"Impact",
 					"Pierce",
 				},
-				Rank:       "commander",
-				UpgradeBar: []string{"force", "force", "force"},
+				Rank:          "commander",
+				UpgradeBar:    []string{"force", "force", "force"},
+				ImageLocation: "Darth Vader.jpeg",
 			},
 		},
 	}

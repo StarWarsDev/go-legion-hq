@@ -51,7 +51,7 @@ type Card struct {
 	DisplayName    string   `json:"displayName,omitempty"`
 	Faction        string   `json:"faction,omitempty"`
 	IconLocation   string   `json:"iconLocation,omitempty"`
-	ImageLocation  string   `json:"imageLocation,omitempty"`
+	ImageLocation  string   `json:"imageName,omitempty"`
 	IsUnique       bool     `json:"isUnique,omitempty"`
 	Keywords       []string `json:"keywords,omitempty"`
 	Products       []string `json:"products,omitempty"`
